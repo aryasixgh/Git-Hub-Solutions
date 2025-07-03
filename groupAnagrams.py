@@ -1,27 +1,24 @@
 class Solution:
     def groupAnagrams(self, strs: list[str]):
 
-        sorted_dict = []
-        # ans_lists = []
-        # final_list =[]
-        # for i in range(len(strs)):
-        #     sorted_str = sorted(strs[i])
-        #     sorted_dict.append(["".join(sorted_str),i])
-        #     for j in range(i, len(strs)):
-        #         if sorted_dict[i][0] == sorted_dict[j][0]:
-        #             ans_lists.append(sorted_dict[i][1])
-        #     final_list.append([])
-        # print(sorted_dict[2][0])
-
-        print(set(strs))
-        for i in range(len(set(strs))):
-            for j in range(i,len(strs)-i):
-                if "".join(sorted(strs[i])) == "".join(sorted(strs[j])):
-                    print("".join(sorted(strs[i])), " <- index no = ", j, end=" ")
-                    
+        sorted_list = []
+        size_set = []
+        for i in range(len(strs)):
+            size_set.append("".join(sorted(strs[i])))
+        new_set = set(size_set)
+        print(new_set)
+        for i in range(len(new_set)):
+            new_list = []
+            for j in range(0,len(strs)):
+                word_j = strs[j]
+                sorted_i = list(new_set)[i]
+                sorted_j = "".join(sorted(word_j))
+                if sorted_i == sorted_j and word_j not in sorted_list:
+                    print("Word = ", word_j, " <- index no = ", j, end=" ")
+                    new_list.append(word_j)
+            sorted_list.append(new_list)
             print()
-
-        return sorted_dict
+        return sorted_list
 
 def main():
     print(Solution().groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
