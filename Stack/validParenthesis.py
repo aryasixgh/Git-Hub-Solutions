@@ -32,7 +32,7 @@ class Solution:
         return True
 
 def main():
-    print(Solution().isValid("())"))
+    print(Solution().isValid("([)]"))
 
 if __name__ == "__main__":
     main()  
