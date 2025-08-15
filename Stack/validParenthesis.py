@@ -28,8 +28,6 @@ class Solution:
                         stackList.pop()
                     else:
                         return False
-                elif stackBelow == ')' or stackBelow == '}' or stackBelow == ']': 
-                    return False
             if s[len(s)-1] == '[' or s[len(s)-1] == '(' or s[len(s)-1] == '{':
                 return False
         if len(stackList) != 0:
@@ -37,7 +35,7 @@ class Solution:
         return True
 
 def main():
-    s =["()", "()[]{}", "(]", "([])","([)]", ")[]", "(["]
+    s =["()", "()[]{}", "(]", "([])","([)]", ")[]", "([", "[[[]"]
     #s=["[[[]"]
     for i in range(len(s)):
         print(s[i], " ", Solution().isValid(s[i]))
