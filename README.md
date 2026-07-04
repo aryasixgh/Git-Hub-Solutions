@@ -3,6 +3,9 @@ https://neetcode.io/roadmap
 
 <img align = let width="846" height="959" alt="image" src="https://github.com/user-attachments/assets/67db8a5f-c0eb-412c-bfca-49075875e512" />
 
+<img width="960" height="1280" alt="pfp" src="https://github.com/user-attachments/assets/212cb2ef-24a7-4acf-b7d7-43756ca8b3eb" />
+
+
 # Skills 
 
 <img width="274" height="136" alt="advance skills" src="https://github.com/user-attachments/assets/7e6bb2d7-aeb3-400a-bf2a-5959d5a9e449" />
